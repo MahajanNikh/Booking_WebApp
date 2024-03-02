@@ -47,9 +47,8 @@ router.post(
         maxAge: 86400000,
       });
 
-      return res.status(201).json(user);
-
-      
+      // return res.sendStatus(201);
+      return res.status(201).json({ message: "User Created  Successfully" });
     } catch (error) {
       console.log("User Error: " + error);
       res.status(500).send({ message: "Something Went Wrong" });
