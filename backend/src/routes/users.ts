@@ -48,7 +48,7 @@ router.post(
       });
 
       // return res.sendStatus(201);
-      return res.status(201).json({ message: "User Created  Successfully" });
+      return res.status(200).send({ message: "User Created  Successfully" });
     } catch (error) {
       console.log("User Error: " + error);
       res.status(500).send({ message: "Something Went Wrong" });
